@@ -5,10 +5,10 @@ from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 st.title("Cross Selling Recommendation")
 
-st.text("Improving revenue by upselling shrimp input product")
+st.header("Improving revenue by upselling shrimp input product")
 
-st.header("Association Rule")
-st.subheader("Transaction behavior")
+# st.header("Association Rule")
+# st.subheader("Transaction behavior")
 df = pd.read_csv("raw_data_v2.csv")
 df.product_default_code = df.product_subcategory + ': ' + df.product_default_code
 df = df.rename(columns={'sale_order_id': 'OrderID', 'product_default_code': 'Product'})
