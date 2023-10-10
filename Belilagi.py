@@ -39,7 +39,7 @@ rules = rules.sort_values(by=['confidence'],ascending=False)
 st.write("\nAssociation Rules:")
 # rules["antecedents"] = rules["antecedents"].map(lambda x:set(x))
 product_name = rules['antecedents'].unique()
-product_name = pd.DataFrame(product_name.atecedents.apply(list))
+product_name = pd.DataFrame(product_name.antecedents.apply(list))
 dropdown = st.selectbox('Select product to check', product_name)
 rules_selected = rules["consequents"].loc[rules["antecedents"] == dropdown]
 st.write(rules_selected.map(lambda x:set(x)) )
