@@ -7,7 +7,7 @@ st.title("Cross Selling Recommendation")
 
 st.header("Improving revenue by upselling shrimp input product")
 
-# st.header("Association Rule")
+
 # st.subheader("Transaction behavior")
 df = pd.read_csv("raw_data_v2.csv")
 df.product_default_code = df.product_subcategory + ': ' + df.product_default_code
